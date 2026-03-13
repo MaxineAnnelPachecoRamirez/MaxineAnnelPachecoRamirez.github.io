@@ -1,32 +1,34 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-
 const metadata = {
-  title: 'Max Pacheco Portfolio',
+  title: 'Maxine Annel Pacheco-Ramírez',
   ignoreTitleTemplate: true,
 };
 ---
-
 <Layout metadata={metadata}>
   <Hero2
     tagline="ABOUT ME"
-    image={{ src: '~/assets/images/max_polo.jpg', alt: 'Max Image' }}
+    image={{ src: '~/assets/images/max_polo.JPG', alt: 'Maxine Image' }}
     actions={[
       {
         variant: 'primary',
         text: 'Resume',
-        href: 'https://tecmx-my.sharepoint.com/:b:/g/personal/a01552369_tec_mx/EQBZqZtATIJBio-kc_OzUDgBvzQzgpuwmkP0whBbIms7MA?e=7KRnjy',
+        href: 'https://uh.edu',
         icon: 'tabler:list-check',
       },
       {
         text: 'Github',
-        href: 'https://github.com/MaxPacheco02',
+        href: 'https://github.com/MaxineAnnelPachecoRamirez',
         icon: 'tabler:brand-github',
+      },
+      {
+        text: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/annelpacheco/',
+        icon: 'tabler:brand-linkedin',
       },
       {
         text: 'My projects',
@@ -38,46 +40,50 @@ const metadata = {
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">Who am I?</span><br />
     </Fragment>
-
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Hi there!</span> I'm Max Pacheco, a Robotics and Digital Systems engineering student
-        at Tecnologico de Monterrey currently in my 8th semester. I'm very passionate about robotics and mathematics, and
-        I love to solve hard problems. Come check out my work!</span
-      >
+        <span class="font-semibold">I'm Maxine Annel Pacheco-Ramírez</span> — a scientist who believes the brain is the most fascinating thing in the universe. 🧠
+        <br /><br />
+        As a PhD researcher at the IUCRC BRAIN Center, University of Houston, I use cutting-edge EEG technology to decode how the brain responds to music, dance, art, and human connection. My work has taken me from the stages of Geneva's AI for Good Summit to the rice paddies of Bali, Indonesia, from MD Anderson Cancer Center to Rice University — always chasing the same question: <em>what happens in our brains when we create, connect, and heal?</em>
+        <br /><br />
+        I graduated top of my class in Biomedical Engineering at Tecnológico de Monterrey, and today I lead projects blending neuroscience with art performances, stroke rehabilitation, Alzheimer's research, and emotion recognition. My research has been featured at the Society for Neuroscience, EBRAINS, the Society for the Neuroscience of Creativity, and beyond.
+        <br /><br />
+        I don't just study the brain — I'm on a mission to use it to make the world more human. ✨
+      </span>
     </Fragment>
   </Hero2>
-
   <BlogLatestPosts title="Projects" id="Projs" />
-
   <Steps
     id="edu"
     title="Education"
     items={[
       {
-        title: `B.S. in Robotics and Digital Systems Engineering <br /> <span class="font-normal">Tecnológico de Monterrey</span> <br /> <span class="text-sm font-normal">2021 - 2025</span>`,
+        title: `Ph.D. in Electrical and Computer Engineering <br /> <span class="font-normal">University of Houston</span> <br /> <span class="text-sm font-normal">2023 - 2028 (expected)</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `B.Eng. in Biomedical Engineering <br /> <span class="font-normal">Tecnológico de Monterrey</span> <br /> <span class="text-sm font-normal">2019 - 2023 · Highest GPA of class 🏆</span>`,
         icon: 'tabler:school',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
-
   <Features2
     title="Contact"
     items={[
       {
         title: 'Phone',
-        description: '+52 (922) 154 5256',
+        description: '(832) 455-1363',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'maxprpxam@icloud.com',
+        description: 'mpachec4@cougarnet.uh.edu',
         icon: 'tabler:mail',
       },
       {
         title: 'Location',
-        description: 'Tecnológico de Monterrey, Monterrey, Nuevo León, México',
+        description: 'University of Houston, Houston, Texas, USA',
         icon: 'tabler:map-pin',
       },
     ]}
