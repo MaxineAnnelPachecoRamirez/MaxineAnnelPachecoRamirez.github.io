@@ -1,4 +1,5 @@
-# Maxine Annel Pacheco Ramírez – Personal Website
+# Maxine Annel Pacheco-Ramírez     
+# Personal Website
 
 This is my personal academic and professional website.
 
