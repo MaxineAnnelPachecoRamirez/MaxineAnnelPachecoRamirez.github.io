@@ -152,6 +152,7 @@ interface Workshop {
   year: number;
   role: string;
   description: string;
+  links?: { text: string; url: string }[];
 }
 
 const workshops: Workshop[] = [
@@ -182,6 +183,35 @@ const workshops: Workshop[] = [
     role: 'Workshop Organizer',
     description:
       'A 4-day immersive interdisciplinary workshop bringing together researchers, programmers, artists, and performers to fuse neuroengineering, AI, and immersive arts. Featured expert talks, collaborative workshops, and hands-on prototyping culminating in a showcase demo.',
+  },
+  {
+    title: 'Embodied Emotions: Music, Body, and Brain in Geneva',
+    venue: 'Swiss Center for Affective Sciences, University of Geneva, Campus Biotech, Switzerland',
+    date: 'July 10–11, 2025',
+    year: 2025,
+    role: 'Workshop Organizer & Neuroengineering Team',
+    description:
+      'AccelNet workshop (Award #2412731) exploring the intersection of music, body, and brain through keynotes, lightning talks, art-science performances, lab visits, and working groups on developing standards for brain behavior synchronization and quantification.',
+  },
+  {
+    title: 'AccelNet–EBRAINS Summer School on Human Data Management & Modelling / AI',
+    venue: 'Learning Center Morgagni, Florence, Italy',
+    date: 'June 15–28, 2026',
+    year: 2026,
+    role: 'Co-Organizer',
+    description:
+      "A 2-week intensive summer school co-organized under AccelNet (NSF Award #2412731) with University of Houston, Università degli Studi di Firenze, and EBRAINS. Three research tracks: Digital Brain Twin for Alzheimer's, SoMo Library & Standardized MoBI Protocols, and Brain-Computer Musical Interfaces using GenAI.",
+    links: [
+      {
+        text: 'EBRAINS Summer School',
+        url: 'https://ebrains.eu/news-and-events/events/2026/ebrains-accelnet-summer-school-on-human-data-management-modelling-and',
+      },
+      {
+        text: 'EBRAINS–AccelNet Joint Day',
+        url: 'https://ebrains.eu/news-and-events/events/2026/ebrains-accelnet-joint-day',
+      },
+      { text: 'AccelNet Summit', url: 'https://www.accelnet-brainhealth.org/' },
+    ],
   },
 ];
 
@@ -362,6 +392,20 @@ const { title = 'Publications', id } = Astro.props;
                   <span class="ml-2 text-xs bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded">{ws.role}</span>
                 </p>
                 <p class="text-sm text-gray-600 dark:text-gray-400">{ws.description}</p>
+                {ws.links && ws.links.length > 0 && (
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    {ws.links.map((link) => (
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-xs bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-2 py-1 rounded hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                      >
+                        {link.text} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </article>
