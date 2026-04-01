@@ -14,48 +14,36 @@ export const headerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'USV',
-          href: getPermalink('a_usv', 'post'),
+          text: 'LiveWire',
+          href: getPermalink('livewire', 'post'),
         },
         {
-          text: 'SDV',
-          href: getPermalink('d_sdv', 'post'),
+          text: 'Music In Medicine',
+          href: getPermalink('music-in-medicine', 'post'),
         },
         {
-          text: 'Puzzlebot',
-          href: getPermalink('g_puzzlebot', 'post'),
+          text: 'MindSpring',
+          href: getPermalink('mindspring', 'post'),
         },
-        // {
-        //   text: 'Dexterous Manipulation',
-        //   href: getPermalink('hand9dof', 'post'),
-        // },
-        // {
-        //   text: 'Gaussian Splatting',
-        //   href: getPermalink('splatting', 'post'),
-        // },
-        // {
-        //   text: 'STM32 Car Nav',
-        //   href: getPermalink('stm32car', 'post'),
-        // },
-        // {
-        //   text: 'FPGA Drone',
-        //   href: getPermalink('fpga_drone', 'post'),
-        // },
-        // {
-        //   text: 'Mini Projects',
-        //   href: getPermalink('mini_projs', 'post'),
-        // },
+        {
+          text: 'EEG on Emotions',
+          href: getPermalink('emotional-flamenco', 'post'),
+        },
+        {
+          text: 'La Catrina Monarca',
+          href: getPermalink('catrina-monarca', 'post'),
+        },
       ],
     },
     {
       text: 'Github',
-      href: 'https://github.com/MaxPacheco02',
+      href: 'https://github.com/MaxineAnnelPachecoRamirez',
     },
   ],
   actions: [
     {
       text: 'Get Resume',
-      href: 'https://tecmx-my.sharepoint.com/:b:/g/personal/a01552369_tec_mx/EQBZqZtATIJBio-kc_OzUDgBvzQzgpuwmkP0whBbIms7MA?e=7KRnjy',
+      href: 'https://uh.edu',
       target: '_blank',
     },
   ],
@@ -117,7 +105,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/MaxineAnnelPachecoRamirez' },
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
