@@ -39,6 +39,22 @@ export const headerData = {
       text: 'Github',
       href: 'https://github.com/MaxineAnnelPachecoRamirez',
     },
+    {
+      text: 'YouTube',
+      href: 'https://www.youtube.com/@MaxineAnnelPacheco-Ram%C3%ADrez',
+    },
+    {
+      text: 'Instagram',
+      href: 'https://www.instagram.com/phdwithmaxineannel/',
+    },
+    {
+      text: 'Figshare',
+      href: 'https://figshare.com/authors/Maxine_Annel_Pacheco-Ram_rez/14013636',
+    },
+    {
+      text: 'ORCID',
+      href: 'https://orcid.org/my-orcid?orcid=0000-0003-0113-5911',
+    },
   ],
   actions: [
     {
