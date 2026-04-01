@@ -14,6 +14,15 @@ interface Publication {
 
 const publications: Publication[] = [
   {
+    title: 'Wearable Biosensor Technology in Education: A Systematic Review',
+    journal: 'Sensors',
+    year: 2024,
+    authors: 'Hernández-Mustieles MA, Lima-Carmona YE, Pacheco-Ramírez MA, et al.',
+    doi: '10.3390/s24082437',
+    url: 'https://www.mdpi.com/1424-8220/24/8/2437',
+    type: 'journal',
+  },
+  {
     title: "Neural Dynamics of Creative Movements During the Rehearsal and Performance of 'LiveWire'",
     journal: 'Scientific Data (Nature)',
     year: 2024,
@@ -23,16 +32,24 @@ const publications: Publication[] = [
     url: 'https://www.nature.com/articles/s41597-024-04010-8',
     type: 'journal',
   },
-  // Agrega más publicaciones aquí siguiendo el mismo formato:
-  // {
-  //   title: "Título del artículo",
-  //   journal: "Nombre de la revista",
-  //   year: 2024,
-  //   authors: "Apellido Iniciales, ...",
-  //   doi: "10.xxxx/xxxxx",
-  //   url: "https://...",
-  //   type: "journal" | "conference" | "preprint"
-  // },
+  {
+    title: 'At-Home Stroke Neurorehabilitation: Early Findings with the NeuroExo BCI System',
+    journal: 'Sensors',
+    year: 2025,
+    authors:
+      'González-España JJ, Sánchez-Rodríguez L, Pacheco-Ramírez MA, Feng J, Nedley K, Chang S-H, Francisco GE, Contreras-Vidal JL',
+    doi: '10.3390/s25051322',
+    url: 'https://www.mdpi.com/1424-8220/25/5/1322',
+    type: 'journal',
+  },
+  {
+    title: 'An Artistic BCI–GenAI System Enabling Real-Time Co-creation in Balinese Performance',
+    journal: 'International Workshop on Creative AI for Live Interactive Performances',
+    year: 2026,
+    authors: 'Aguilar-Herrera AJ, Hernández-Aguado CO, Monarres-Sokolovskaya JA, et al.',
+    url: 'https://scholar.google.com/citations?user=2HG3KP4AAAAJ&hl=en',
+    type: 'conference',
+  },
 ];
 
 const { title = 'Publications', id } = Astro.props;
