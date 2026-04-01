@@ -1,7 +1,7 @@
 # Maxine Annel Pacheco-Ramírez     
 # Personal Website
 
-This is my personal academic and professional website.
+This repository contains my personal academic and professional website.
 
 Built using Astro and Tailwind CSS, based on the AstroWind template (MIT License).
 
