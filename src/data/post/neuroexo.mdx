@@ -1,61 +1,57 @@
 ---
 publishDate: 2024-12-01T00:00:00Z
-updateDate: 2024-12-01T00:00:00Z
+updateDate: 2026-02-21T00:00:00Z
 author: Maxine Annel Pacheco-Ramírez
-title: NeuroExo & MyoStep
-excerpt: Brain-controlled exoskeletons and the first pediatric soft exoskeleton for children with cerebral palsy
+title: NeuroExo
+excerpt: A low-cost brain-computer interface for at-home stroke neurorehabilitation
 image: ~/assets/images/neuroexo.jpg
 category: Research
 tags:
   - Exoskeleton
-  - Pediatric
-  - Cerebral Palsy
-  - Rehabilitation
+  - Stroke Rehabilitation
   - Brain-Computer Interface
-  - Wearables
-  - IEEE
+  - EEG
+  - At-Home Therapy
+  - Sensors
+  - IUCRC BRAIN
 
 metadata:
   canonical: https://maxineannelpachecoramirez.github.io/neuroexo
 ---
 
-import { YouTube } from 'astro-embed';
 import CenteredImage from '~/components/common/CenteredImage.astro';
 
-The NeuroExo project develops brain-machine interfaces and robotic exoskeletons for rehabilitation. The latest breakthrough is **MyoStep** — the first wearable pediatric soft exoskeleton made of smart materials, designed to help children with cerebral palsy walk.
+The **NeuroExo** project develops a low-cost, noninvasive brain-computer interface (BCI) system paired with an upper-limb robotic exoskeleton for **at-home stroke neurorehabilitation**. The goal is to democratize access to safe and effective robotic rehabilitation — not only in clinics, but in the comfort of patients' homes.
 
-## MyoStep: A Breakthrough for Children
+## The Challenge
 
-Cerebral palsy affects 1 to 4 out of every 1,000 births worldwide, severely impacting motor skills and mobility. Traditional exoskeletons are too heavy and don't accommodate a child's growth. MyoStep changes everything:
+Stroke survivors often lack access to consistent, long-term rehabilitation therapy. Traditional clinic-based approaches are costly and require physical therapists or technicians. NeuroExo addresses this by providing a portable, easy-to-use system that patients can operate independently at home.
 
-- **Lightweight and discreet** — looks like a soft power suit
-- **Smart materials** — artificial muscles and smart fabrics
-- **Growth-adaptive** — adjusts as children grow
-- **Wireless sensor network** — provides real-time movement feedback
+## How It Works
 
-## Brain-Controlled Rehabilitation
+The NeuroExo system uses scalp **EEG to decode movement intent** from the brain and translates those signals into commands that guide a robotic exoskeleton to assist upper-limb movement. Key features include:
 
-The NeuroExo system also includes a portable brain-computer interface (BCI) exoskeleton for stroke rehabilitation. This device:
+- **No surgery required** — fully noninvasive EEG-based BCI
+- **At-home use** — designed for patients to operate without assistance
+- **Real-time feedback** — visual GUI shows electrode signal quality and guides setup
+- **Low-cost design** — built from commercial off-the-shelf components for accessibility
 
-- Requires no surgery
-- Can be used both in clinic and at home
-- Uses EEG to decode movement intent
-- Guides robotic assistance based on brain signals
+## Early Feasibility Study
 
-## Clinical Impact
+An early feasibility study consisted of a **six-week protocol**: an initial training and calibration phase at the clinic, followed by **60 sessions of neuromotor therapy at home**. Participants achieved a compliance rate between 21% and 100% (average 69%), while maintaining adequate signal quality and positive perceived BCI performance.
 
-"This kind of innovation has the potential to dramatically improve quality of life, helping children move through the world with greater ease and dignity." — Dr. Gerard Francisco, TIRR Memorial Hermann
+## Publication
 
-## My Role
+González-España, J.J., Sánchez-Rodríguez, L., **Pacheco-Ramírez, M.A.**, Feng, J., Nedley, K., Chang, S.-H., Francisco, G.E., & Contreras-Vidal, J.L. (2025). At-Home Stroke Neurorehabilitation: Early Findings with the NeuroExo BCI System. _Sensors_, 25(5), 1322.
 
-I contribute to the EEG-based brain-computer interface development and testing, helping to decode movement intent signals for exoskeleton control.
+[Read the paper](https://doi.org/10.3390/s25051322)
 
 ## Collaborators
 
-- **UH BRAIN Center** - Dr. Jose L. Contreras-Vidal
-- **TIRR Memorial Hermann** - Dr. Gerard Francisco
-- **Multi-disciplinary team** including biomechanics, orthopedic surgery, costume design, industrial design, and engineering
+- **UH BRAIN Center** — Dr. Jose L. Contreras-Vidal
+- **TIRR Memorial Hermann** — Dr. Gerard E. Francisco, Dr. Shuo-Hsiu Chang
+- **UH College of Architecture and Design** — Jeff Feng
 
-## Publications
+## Learn More
 
-Featured in IEEE Electron Devices Magazine and funded by the IEEE Electron Devices Society Award.
+Visit the official project website: [neuroexo.com](http://neuroexo.com/)
