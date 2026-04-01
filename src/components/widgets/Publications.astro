@@ -1,7 +1,4 @@
 ---
-// Publications.astro - Lista de publicaciones científicas
-// Para agregar una nueva publicación, solo añade un objeto al array 'publications'
-
 interface Publication {
   title: string;
   journal: string;
@@ -10,6 +7,14 @@ interface Publication {
   doi?: string;
   url?: string;
   type: 'journal' | 'conference' | 'preprint';
+}
+
+interface Presentation {
+  title: string;
+  venue: string;
+  year: number;
+  authors: string;
+  type: 'poster' | 'oral' | 'pitch';
 }
 
 const publications: Publication[] = [
@@ -49,6 +54,158 @@ const publications: Publication[] = [
     authors: 'Aguilar-Herrera AJ, Hernández-Aguado CO, Monarres-Sokolovskaya JA, et al.',
     url: 'https://scholar.google.com/citations?user=2HG3KP4AAAAJ&hl=en',
     type: 'conference',
+  },
+];
+
+const conferenceAbstracts: Presentation[] = [
+  {
+    title: 'Robust Multi-Class EEG Emotion Recognition Via Trial-Level Validation & Supervised Feature Selection',
+    venue: 'EBRAINS Summit 2025, Brussels, Belgium',
+    year: 2025,
+    authors: 'Pacheco-Ramírez MA, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'Neural Dynamics in Dance Improvisation',
+    venue: 'Society for the Neuroscience of Creativity (SfNC) Conference, Paris, France',
+    year: 2025,
+    authors:
+      'Pacheco-Ramírez MA, Lima-Carmona YE, Aguilar-Herrera AJ, Sánchez-Rodríguez L, Huber D, Ramírez-Moreno MA, Brandt A, Noble A, Noble D, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'Toward Standardization: A Multimodal Pipeline for Mobile Brain-Body Imaging (MoBI)',
+    venue: 'EBRAINS Summit 2025, Brussels, Belgium',
+    year: 2025,
+    authors: 'Sánchez-Rodríguez L, Aguilar-Herrera AJ, Pacheco-Ramírez MA, Lima-Carmona YE, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'Extending EEG Microstate Analysis to Real-World Settings for Characterizing Creativity in the Arts',
+    venue: 'EBRAINS Summit 2025, Brussels, Belgium',
+    year: 2025,
+    authors:
+      'Lima-Carmona YE, Pacheco-Ramírez MA, Aguilar-Herrera AJ, Sánchez-Rodríguez L, Das D, Ferguson R, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'Advanced Analysis Pipeline for Mobile EEG Recordings During Real-World Settings',
+    venue: 'Society for the Neuroscience of Creativity (SfNC) Conference, Paris, France',
+    year: 2025,
+    authors:
+      'Sánchez-Rodríguez L, Aguilar-Herrera AJ, Pacheco-Ramírez MA, Lima-Carmona YE, Delgado-Jimenez EA, Huber D, Ramírez-Moreno MA, Cruz-Moreno JG, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'At-home Stroke NeuroRehabilitation with the NeuroEXO Brain-Machine Interface System',
+    venue: 'Society for Neuroscience (SfN) Conference, Chicago, IL',
+    year: 2024,
+    authors:
+      'Sánchez-Rodríguez L, Pacheco-Ramírez MA, González-España JJ, Nedley K, Chang S-H, Francisco GE, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title:
+      'NeuroHumanities: Advancing Human-Centered and Inclusive Engineering Education through Integrated Convergent Research, Workforce Development and STEAM Outreach',
+    venue: '2024 NSF EEC Grantees Conference, Alexandria, VA',
+    year: 2024,
+    authors: 'Aguilar-Herrera AJ, Contreras-Vidal JL, Pacheco-Ramírez MA, Lima-Carmona YE',
+    type: 'oral',
+  },
+  {
+    title: 'Mindspring: A Personalized Health Wearable Device for Stress Management in Teens',
+    venue: 'IUCRC Brain Center Annual Meeting, Morgantown, WV',
+    year: 2024,
+    authors: 'Sánchez-Rodríguez L, Pacheco-Ramírez MA, Baquero G, Ferguson R, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title: 'Understanding Inter-Brain Synchrony and Functional Connectivity During Dance Performance (LiveWire)',
+    venue: 'InterfaceRice 2024, Rice University, Houston, TX — 🏆 Second Prize',
+    year: 2024,
+    authors:
+      'Pacheco-Ramírez MA, Aguilar-Herrera AJ, Huber D, Brandt A, Noble A, Noble D, Ramírez-Moreno MA, Contreras-Vidal JL',
+    type: 'poster',
+  },
+  {
+    title:
+      'Brain Communication and Neural Dynamics during Dance Performance through EEG, Hyperscanning and Mobile Brain-Body Imaging Techniques',
+    venue: 'NeuroGateways 2024 Symposium, University of Alabama at Birmingham',
+    year: 2024,
+    authors: 'Pacheco-Ramírez MA, Contreras-Vidal JL',
+    type: 'oral',
+  },
+  {
+    title: 'Understanding Inter-Brain Synchrony and Functional Connectivity During Dance Performance',
+    venue: 'Society for Neuroscience (SfN) Annual Meeting 2023, Washington, DC',
+    year: 2023,
+    authors:
+      'Pacheco-Ramírez MA, Aguilar-Herrera AJ, Huber D, Brandt A, Noble A, Noble D, Ramírez-Moreno MA, Contreras-Vidal JL',
+    type: 'poster',
+  },
+];
+
+interface Workshop {
+  title: string;
+  venue: string;
+  date: string;
+  year: number;
+  role: string;
+  description: string;
+}
+
+const workshops: Workshop[] = [
+  {
+    title:
+      'Building Frameworks for Brain, Body, and Music: Advancing Data Standards for Dance, Sound, and Neurotechnology',
+    venue: 'NSF AccelNet Workshop (Award #2412731), UCSF, San Francisco, CA',
+    date: 'November 10–11, 2025',
+    year: 2025,
+    role: 'Neuroengineering Team & EEG Support',
+    description:
+      'International workshop bringing together researchers, artists, and industry leaders to advance data standards across dance, sound, music, and neurotechnology. Contributed with the IUCRC BRAIN neuroengineering team supporting the technical setup and EEG recording for La Catrina Monarca performance.',
+  },
+  {
+    title: 'MoBI Data Preparation and Denoising Workshop',
+    venue: 'Laboratory for Noninvasive Brain-Machine Interface Systems, University of Houston',
+    date: 'August 25–27, 2025',
+    year: 2025,
+    role: 'Workshop Instructor',
+    description:
+      'A 3-day hybrid workshop guiding researchers and students through hands-on training in Mobile Brain/Body Imaging (MoBI) data preprocessing using MATLAB and EEGLAB. Covered EEG denoising pipelines, multimodal datasets, and best practices for data preparation.',
+  },
+  {
+    title: 'Blooming Deserts — Neurohumanities Creative Workshop',
+    venue: 'University of Houston, in collaboration with Neurohumanities Lab, Tecnológico de Monterrey',
+    date: 'August 4–8, 2025',
+    year: 2025,
+    role: 'Workshop Organizer',
+    description:
+      'A 4-day immersive interdisciplinary workshop bringing together researchers, programmers, artists, and performers to fuse neuroengineering, AI, and immersive arts. Featured expert talks, collaborative workshops, and hands-on prototyping culminating in a showcase demo.',
+  },
+];
+
+const meetingPresentations: Presentation[] = [
+  {
+    title: 'Mindspring: A Personalized Health Wearable Device for Stress Management in Teens',
+    venue: 'IUCRC Brain Center Annual Meeting, Baltimore, MD',
+    year: 2025,
+    authors: 'Sánchez-Rodríguez L, Pacheco-Ramírez MA, Baquero G, Ferguson R, Contreras-Vidal JL',
+    type: 'oral',
+  },
+  {
+    title: 'Mindspring: A Personalized Health Wearable Device for Stress Management in Teens',
+    venue: 'Eleventh Annual Bayou Startup Showcase, RED Labs Accelerator, The Ion, Houston, TX',
+    year: 2024,
+    authors: 'Sánchez-Rodríguez L, Pacheco-Ramírez MA, Contreras-Vidal JL',
+    type: 'pitch',
+  },
+  {
+    title: 'Mindspring: A Personalized Health Wearable Device for Stress Management in Teens',
+    venue: 'IUCRC Brain Center Annual Meeting, Morgantown, WV',
+    year: 2024,
+    authors: 'Sánchez-Rodríguez L, Pacheco-Ramírez MA, Baquero G, Ferguson R, Contreras-Vidal JL',
+    type: 'oral',
   },
 ];
 
@@ -134,6 +291,82 @@ const { title = 'Publications', id } = Astro.props;
       }
     </div>
 
-    {publications.length === 0 && <p class="text-center text-gray-500 dark:text-gray-400 py-8">No publications yet.</p>}
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Conference Abstracts & Posters</h3>
+    <div class="space-y-4">
+      {
+        conferenceAbstracts.map((pres) => (
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm border border-gray-100 dark:border-slate-700">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <span
+                  class={`inline-flex items-center justify-center w-12 h-12 rounded-lg text-white font-bold text-sm ${pres.type === 'poster' ? 'bg-teal-600' : 'bg-orange-600'}`}
+                >
+                  {pres.year.toString().slice(-2)}
+                </span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-1">{pres.title}</h4>
+                <p class="text-teal-600 dark:text-teal-400 font-medium text-sm mb-1">{pres.venue}</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{pres.authors}</p>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Meeting Presentations</h3>
+    <div class="space-y-4">
+      {
+        meetingPresentations.map((pres) => (
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm border border-gray-100 dark:border-slate-700">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <span
+                  class={`inline-flex items-center justify-center w-12 h-12 rounded-lg text-white font-bold text-sm ${pres.type === 'oral' ? 'bg-indigo-600' : pres.type === 'pitch' ? 'bg-rose-600' : 'bg-gray-600'}`}
+                >
+                  {pres.year.toString().slice(-2)}
+                </span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-1">{pres.title}</h4>
+                <p class="text-indigo-600 dark:text-indigo-400 font-medium text-sm mb-1">
+                  {pres.venue}
+                  <span class="ml-2 text-xs bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded">
+                    {pres.type === 'oral' ? 'Oral' : pres.type === 'pitch' ? 'Pitch' : 'Presentation'}
+                  </span>
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{pres.authors}</p>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">Workshops</h3>
+    <div class="space-y-4">
+      {
+        workshops.map((ws) => (
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm border border-gray-100 dark:border-slate-700">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg text-white font-bold text-sm bg-amber-600">
+                  {ws.year.toString().slice(-2)}
+                </span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-1">{ws.title}</h4>
+                <p class="text-amber-600 dark:text-amber-400 font-medium text-sm mb-1">
+                  {ws.date} · {ws.venue}
+                  <span class="ml-2 text-xs bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded">{ws.role}</span>
+                </p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{ws.description}</p>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>
