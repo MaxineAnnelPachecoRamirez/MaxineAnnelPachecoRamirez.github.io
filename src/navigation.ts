@@ -53,7 +53,7 @@ export const headerData = {
     },
     {
       text: 'ORCID',
-      href: 'https://orcid.org/my-orcid?orcid=0000-0003-0113-5911',
+      href: 'https://orcid.org/0000-0003-0113-5911',
     },
   ],
   actions: [
