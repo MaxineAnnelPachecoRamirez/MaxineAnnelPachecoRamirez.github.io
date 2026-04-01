@@ -4,6 +4,7 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Publications from '~/components/widgets/Publications.astro';
 const metadata = {
   title: 'Maxine Annel Pacheco-Ramírez',
   ignoreTitleTemplate: true,
@@ -51,23 +52,7 @@ const metadata = {
     </Fragment>
   </Hero2>
 
-  <!-- VIDEO SECTION -->
-  <section class="py-12 px-4">
-    <div class="max-w-4xl mx-auto">
-      <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
-        <iframe 
-          width="100%" 
-          height="100%" 
-          src="https://www.youtube.com/embed/6UpOGJ7dyYU" 
-          title="Video"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
-          class="w-full h-full">
-        </iframe>
-      </div>
-    </div>
-  </section>
+  <Publications title="Publications" id="pubs" />
 
   <BlogLatestPosts title="Projects" id="Projs" />
   <Steps
