@@ -7,9 +7,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Maxine Annel Pacheco-Ramírez | Neuroscience & Brain Research
+    default: Maxine Annel Pacheco-Ramírez | PhD Candidate in Neuroscience & Brain-Computer Interfaces
     template: '%s — Maxine Annel'
-  description: 'PhD researcher at IUCRC BRAIN Center, University of Houston. Using EEG technology to decode how the brain responds to music, dance, art, and human connection.'
+  description: 'PhD Candidate (Qualifier passed, Spring 2026) at the IUCRC BRAIN Center, University of Houston. EEG researcher decoding how the brain responds to music, dance, and human connection — from concert halls to clinical settings.'
   robots:
     index: true
     follow: true
