@@ -20,6 +20,7 @@ metadata:
 
 import { YouTube } from "astro-embed";
 import CenteredImage from "~/components/common/CenteredImage.astro";
+import nsapPosterImage from "~/assets/images/meeting-of-minds-nsap-poster.jpg";
 
 <YouTube id="kWpc8rgI3-I" params="autoplay=1&mute=1" />
 
@@ -59,7 +60,7 @@ Meeting of Minds began in **November 2023** as a follow-up to the success of Liv
 ## IUCRC BRAIN Symposium
 
 <CenteredImage
-  src="~/assets/images/meeting-of-minds-nsap-poster.jpg"
+  src={nsapPosterImage}
   alt="Harshil Vijayan and Maxine Annel Pacheco-Ramírez presenting the Meeting of Minds poster at the IUCRC BRAIN Symposium"
 />
 
