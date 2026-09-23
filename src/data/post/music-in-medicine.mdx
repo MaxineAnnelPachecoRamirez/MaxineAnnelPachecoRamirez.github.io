@@ -1,9 +1,9 @@
 ---
 publishDate: 2023-11-01T00:00:00Z
-updateDate: 2026-09-23T00:00:00Z
+updateDate: 2025-12-01T00:00:00Z
 author: Maxine Annel Pacheco-Ramírez
 title: Music in Medicine
-excerpt: Recording EEG from performers and audiences during live concerts at MD Anderson Cancer Center
+excerpt: Recording EEG from Grammy-nominated, highly skilled performers during live concerts at MD Anderson Cancer Center
 image: ~/assets/images/music-in-medicine.jpg
 category: Research
 tags:
@@ -17,6 +17,7 @@ metadata:
 ---
 
 import { YouTube } from 'astro-embed';
+import ImageCarousel from '~/components/common/ImageCarousel.astro';
 
 At MD Anderson Cancer Center, live concerts are part of the hospital experience. They are organized by the [Music-in-Medicine Initiative](https://www.mdanderson.org/patients-family/diagnosis-treatment/patient-support/music-in-medicine-initiative.html), a program founded and directed by Dr. Mei Rui, concert pianist and Assistant Professor of Neurosurgery, which studies music as a clinical intervention for patients, caregivers, and providers.
 
@@ -25,6 +26,30 @@ At MD Anderson Cancer Center, live concerts are part of the hospital experience.
 Through a collaboration between the Music-in-Medicine Initiative and the UH BRAIN Center, these concerts also became recording sessions. From **November 2023 to December 2025**, the UH team brought mobile EEG into the concert space, recording brain activity from performers and audience members as the music unfolded. Each concert meant setting up in a working hospital, synchronizing multiple participants, and capturing clean data from a live performance with no second take.
 
 <YouTube id="wmIeSIHivi8" params="start=594&autoplay=1&mute=1" />
+
+## Presentations
+
+Progress on this project has been shared through an oral presentation at Arizona State University and a poster presentation at the IAB meeting. An analysis paper based on this work is currently in development.
+
+<ImageCarousel
+  images={[
+    {
+      src: '~/assets/images/mim-concert.jpg',
+      alt: 'Presentation on the Music in Medicine project at Arizona State University',
+      caption: 'IUCRC Brain Meeting 2026- Oral presentation at Arizona State University',
+    },
+    {
+      src: '~/assets/images/mim-asu-talk.jpg',
+      alt: 'Presentation on the Music in Medicine project at Arizona State University',
+      caption: 'IUCRC Brain Meeting 2026 - Oral presentation at Arizona State University',
+    },
+    {
+      src: '~/assets/images/mim-iab-poster.jpg',
+      alt: 'Poster presentation on the Music in Medicine project at the IAB meeting 2026',
+      caption: 'Poster presentation at the IAB meeting',
+    },
+  ]}
+/>
 
 ## Open Data
 
