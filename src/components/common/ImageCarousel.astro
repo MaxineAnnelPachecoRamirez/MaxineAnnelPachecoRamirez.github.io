@@ -1,0 +1,101 @@
+---
+import Image from '~/components/common/Image.astro';
+import type { ImageProps } from '~/utils/images-optimization';
+
+export interface Props {
+  images: Array<ImageProps & { caption?: string }>;
+}
+
+const { images = [] } = Astro.props;
+---
+
+<div class="image-carousel relative my-8" data-carousel>
+  <div
+    class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-lg shadow-lg [scrollbar-width:none]"
+    data-track
+  >
+    {
+      images.map(({ caption, ...image }) => (
+        <figure class="snap-center shrink-0 w-full m-0 flex flex-col items-center justify-center bg-gray-100 dark:bg-slate-800">
+          <Image {...image} class="w-full h-72 md:h-[28rem] object-contain" />
+          {caption && <figcaption class="py-2 px-4 text-sm text-center text-muted">{caption}</figcaption>}
+        </figure>
+      ))
+    }
+  </div>
+
+  {
+    images.length > 1 && (
+      <>
+        <button
+          type="button"
+          aria-label="Previous image"
+          data-prev
+          class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white w-10 h-10 flex items-center justify-center hover:bg-black/70"
+        >
+          &#8249;
+        </button>
+        <button
+          type="button"
+          aria-label="Next image"
+          data-next
+          class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 text-white w-10 h-10 flex items-center justify-center hover:bg-black/70"
+        >
+          &#8250;
+        </button>
+        <div class="flex justify-center gap-2 mt-3">
+          {images.map((_, i) => (
+            <button
+              type="button"
+              aria-label={`Go to image ${i + 1}`}
+              data-dot={i}
+              class="w-2.5 h-2.5 rounded-full bg-gray-400 dark:bg-slate-500"
+            />
+          ))}
+        </div>
+      </>
+    )
+  }
+</div>
+
+<style>
+  [data-track]::-webkit-scrollbar {
+    display: none;
+  }
+  [data-dot].active {
+    background-color: var(--aw-color-primary, #2563eb);
+  }
+</style>
+
+<script>
+  function setupCarousels() {
+    document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((carousel) => {
+      if (carousel.dataset.ready) return;
+      carousel.dataset.ready = 'true';
+
+      const track = carousel.querySelector<HTMLElement>('[data-track]');
+      if (!track) return;
+      const dots = Array.from(carousel.querySelectorAll<HTMLElement>('[data-dot]'));
+      const count = track.children.length;
+
+      const current = () => Math.round(track.scrollLeft / track.clientWidth);
+      const goTo = (index: number) => {
+        const target = (index + count) % count;
+        track.scrollTo({ left: target * track.clientWidth, behavior: 'smooth' });
+      };
+      const updateDots = () => {
+        const i = current();
+        dots.forEach((dot, j) => dot.classList.toggle('active', i === j));
+      };
+
+      carousel.querySelector('[data-prev]')?.addEventListener('click', () => goTo(current() - 1));
+      carousel.querySelector('[data-next]')?.addEventListener('click', () => goTo(current() + 1));
+      dots.forEach((dot, j) => dot.addEventListener('click', () => goTo(j)));
+      track.addEventListener('scroll', updateDots, { passive: true });
+      updateDots();
+    });
+  }
+
+  setupCarousels();
+  document.addEventListener('astro:after-swap', setupCarousels);
+</script>
