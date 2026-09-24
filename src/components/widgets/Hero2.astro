@@ -90,7 +90,7 @@ const {
       <div class="lg:basis-2/5">
         {
           video && (
-            <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-lg aspect-[4/3] overflow-hidden rounded-lg shadow-lg intersect-once intercept-no-queue motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
+            <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-lg aspect-video overflow-hidden rounded-lg shadow-lg intersect-once intercept-no-queue motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
               <iframe
                 src={`https://www.youtube.com/embed/${video}?autoplay=1&mute=1&loop=1&playlist=${video}&controls=0&modestbranding=1&rel=0&disablekb=1`}
                 title="YouTube video"
@@ -98,7 +98,7 @@ const {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
                 tabindex="-1"
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full pointer-events-none"
+                class="absolute inset-0 w-full h-full pointer-events-none"
               />
             </div>
           )
